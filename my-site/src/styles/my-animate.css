@@ -1,0 +1,39 @@
+.home-enter,
+.home-leave {
+  animation-duration: 250ms;
+  animation-timing-function: ease-in-out;
+}
+
+.home-enter.home-enter-active {
+  animation-name: zoomIn;
+}
+
+.home-leave.home-leave-active {
+  animation-name: zoomOut;
+}
+
+.workimg-enter,
+.workimg-leave {
+  animation-duration: 250ms;
+}
+
+.workimg-enter.workimg-enter-active {
+  animation-name: fadeInDown;
+}
+
+.workimg-leave.workimg-leave-active {
+  animation-name: fadeOutUp;
+}
+
+.workcontent-enter,
+.workcontent-leave {
+  animation-duration: 250ms;
+}
+
+.workcontent-enter.workcontent-enter-active {
+  animation-name: fadeInUp;
+}
+
+.workcontent-leave.workcontent-leave-active {
+  animation-name: fadeOutDown;
+}
