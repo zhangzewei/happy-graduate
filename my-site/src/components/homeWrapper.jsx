@@ -31,8 +31,21 @@ class HomeWrapper extends React.Component {
     <div className="home-content">
       <div className="wrapper-item image-wrapper" style={{ backgroundImage: `url(${HomePageImg})` }} />
       <div className="wrapper-item content-wrapper">
-        <button onClick={() => { this.clickPage('work')}}>work</button>
-        <button onClick={() => { this.clickPage('about')}}>about</button>
+        <div className="home-page">
+          <div className="my-name">MARKZZW</div>
+          <ul className="nav">
+            <li className="nav-button" onClick={() => { this.clickPage('work')}}>我的足迹</li>
+            <li className="nav-button" onClick={() => { this.clickPage('about')}}>我的样子</li>
+            <li className="nav-button" onClick={() => { this.clickPage('blog')}}>我的博客</li>
+          </ul>
+          <ul className="links">
+            <li className="link-item"><a href="https://github.com/zhangzewei" target="_blank" className="link">GitHub</a></li>
+            <li className="link-item"><a href="https://juejin.im/user/58ac4ed51b69e6006c159ca8" target="_blank" className="link">掘金</a></li>
+          </ul>
+          <ul className="contacts">
+            <li className="contact-item">E-mail: lanamarkzzw@foxmail.com</li>
+          </ul>
+        </div>
       </div>
     </div>
   );
