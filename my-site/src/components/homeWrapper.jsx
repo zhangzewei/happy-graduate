@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import { Pages } from '../App.jsx';
 import HomePageImg from  '../images/desk1.jpg';
 
 class HomeWrapper extends React.Component {
@@ -34,9 +35,9 @@ class HomeWrapper extends React.Component {
         <div className="home-page">
           <div className="my-name">MARKZZW</div>
           <ul className="nav">
-            <li className="nav-button" onClick={() => { this.clickPage('work')}}>我的足迹</li>
-            <li className="nav-button" onClick={() => { this.clickPage('about')}}>我的样子</li>
-            <li className="nav-button" onClick={() => { this.clickPage('blog')}}>我的博客</li>
+            <li className="nav-button" onClick={() => { this.clickPage(Pages.work)}}>我的足迹</li>
+            <li className="nav-button" onClick={() => { this.clickPage(Pages.about)}}>我的样子</li>
+            <li className="nav-button" onClick={() => { this.clickPage(Pages.blog)}}>我的博客</li>
           </ul>
           <ul className="links">
             <li className="link-item"><a href="https://github.com/zhangzewei" target="_blank" className="link">GitHub</a></li>

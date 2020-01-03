@@ -58,6 +58,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-y: auto;
 }
 
 .home-page {
@@ -148,5 +149,51 @@ ul {
   width: 70%;
   margin: 0 auto;
   text-align: center;
+  color: #777575;
+}
+
+.right-content {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+li.blog {
+  box-shadow: 0px 0px 1px 0.5px rgba(0,0,0,0.3);
+  border-radius: 2px;
+  margin-bottom: 17px;
+  padding: 5px;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+
+li.blog a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li.blog:hover {
+  box-shadow: 0px 1px 10px 0.5px rgba(0,0,0,.3);
+}
+
+li.blog:hover .title {
+  color: #49c8ff;
+}
+
+li.blog .title {
+  transition: all ease-in-out 0.3s;
+  font-size: 18px;
+  margin-bottom: 10px;
+  line-height: 1.75;
+}
+
+li.blog .title span.blog-number {
+  font-size: 14px;
+  padding-right: 10px;
+  color: #818080;
+}
+
+li.blog .infos {
   color: #777575;
 }

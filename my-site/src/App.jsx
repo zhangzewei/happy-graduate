@@ -1,16 +1,18 @@
 import React from 'react';
 import HomeWrapper from  './components/homeWrapper.jsx';
-import WorkWrapper from './components/workWrapper.jsx';
+import SecondWrapper from './components/secondWrapper.jsx';
 import './App.css';
+
+export const Pages = {
+  home: 'home',
+  work: 'work',
+  about: 'about',
+  blog: 'blog'
+}
 
 class App extends React.Component {
   constructor() {
     super();
-    this.pages = {
-      home: 'home',
-      work: 'work',
-      about: 'about'
-    }
     this.state = {
       currPage: null
     };
@@ -18,7 +20,7 @@ class App extends React.Component {
   
   componentDidMount() {
     this.setState({
-      currPage: this.pages.home
+      currPage: Pages.home
     });
   }
 
@@ -30,10 +32,10 @@ class App extends React.Component {
       changeCurrentPage: this.changeCurrentPage,
       currPage
     }
-    if (currPage === this.pages.home) {
+    if (currPage === Pages.home) {
       return <HomeWrapper {...props}/>;
     }
-    return <WorkWrapper {...props} />;
+    return <SecondWrapper {...props} />;
   }
 
   render() {

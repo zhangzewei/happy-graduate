@@ -1,8 +1,18 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import { Pages } from '../App.jsx';
 import WorkImage from  '../images/desk2.jpg';
+import BlogImage from  '../images/desk3.jpg';
+import AboutImage from  '../images/sunset1.jpg';
+import Blogs from '../containers/blogs.jsx';
 
-class WorkWrapper extends React.Component {
+const ImagesMapping = {
+  work: WorkImage,
+  about: AboutImage,
+  blog: BlogImage
+}
+
+class SecondWrapper extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -33,6 +43,15 @@ class WorkWrapper extends React.Component {
       this.timmer = null;
     }, 100);
   }
+
+  renderRightContent = page => {
+    switch(page) {
+      case Pages.blog:
+        return <Blogs />;
+      default:
+        return null;
+    }
+  }
   
   render() {
     const { show } = this.state;
@@ -44,7 +63,7 @@ class WorkWrapper extends React.Component {
           transitionLeaveTimeout={200}
           className="wrapper-item"
         >
-          {show ? <div className="image-wrapper" style={{ backgroundImage: `url(${WorkImage})` }} /> : null}
+          {show ? <div className="image-wrapper" style={{ backgroundImage: `url(${ImagesMapping[currPage]})` }} /> : null}
         </ReactCSSTransitionGroup>
         <ReactCSSTransitionGroup
           transitionName="workcontent"
@@ -53,12 +72,14 @@ class WorkWrapper extends React.Component {
           className="wrapper-item"
         >
           {show ? <div className="content-wrapper">
-            <button onClick={this.clickBack}>home</button>
-            <div>{currPage}</div>
+            <div className="right-content">
+              <button className="nav-button" onClick={this.clickBack}>返回主页</button>
+              {this.renderRightContent(currPage)}
+            </div>
           </div> : null}
         </ReactCSSTransitionGroup>
       </div>;
   }
 }
 
-export default WorkWrapper;
+export default SecondWrapper;

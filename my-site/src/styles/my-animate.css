@@ -37,3 +37,11 @@
 .workcontent-leave.workcontent-leave-active {
   animation-name: fadeOutDown;
 }
+
+.blog-enter {
+  animation-duration: 200ms;
+}
+
+.blog-enter.blog-enter-active {
+  animation-name: zoomIn;
+}
