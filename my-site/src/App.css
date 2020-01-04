@@ -197,3 +197,50 @@ li.blog .title span.blog-number {
 li.blog .infos {
   color: #777575;
 }
+
+@media (max-width: 768px) {
+  .App {
+    padding: 0 2em;
+  }
+
+  .container-wrapper {
+    height: 85vh;
+  }
+
+  .home-page {
+    height: 95%;
+  }
+
+  .home-content,
+  .container-wrapper {
+    flex-direction: column;
+  }
+
+  .wrapper-item:first-child {
+    flex: 0 0 25%;
+  }
+
+  .wrapper-item:last-child {
+    flex: 0 0 75%;
+    overflow: hidden;
+  }
+
+  .contacts {
+    font-size: .8rem;
+    width: 90%;
+  }
+
+  li.blog .title {
+    font-size: 14px;
+    line-height: 1.35;
+  }
+
+  li.blog .infos {
+    color: #777575;
+    font-size: 12px;
+  }
+
+  .nav-button {
+    font-size: 14px;
+  }
+}
