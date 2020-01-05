@@ -45,3 +45,12 @@
 .blog-enter.blog-enter-active {
   animation-name: zoomIn;
 }
+
+
+.workanimate-enter {
+  animation-duration: 200ms;
+}
+
+.workanimate-enter.workanimate-enter-active {
+  animation-name: slideInUp;
+}

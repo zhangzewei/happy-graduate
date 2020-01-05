@@ -198,6 +198,56 @@ li.blog .infos {
   color: #777575;
 }
 
+.wroks {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+ul.works-wrapper {
+  border-left: 2px solid #41b0e0;
+  margin-left: 20px;
+}
+
+li.work {
+  position: relative;
+}
+
+li.work .dot-wrapper {
+  position: relative;
+  background: white;
+  padding: 5px;
+  top: -10px;
+  color: #41b0e0;
+  display: flex;
+  align-items: center;
+}
+
+li.work .dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #41b0e0;
+  border: 2px solid #fff;
+  left: -6px;
+  border-radius: 50%;
+}
+
+li.work .date {
+  color: #cccccc;
+  margin-left: 5px;
+}
+
+li.work .card {
+  margin: 20px;
+  margin-top: 5px;
+  padding: 5px 10px;
+}
+
+.year-wrapper h3 {
+  color: #41b0e0;
+}
+
 @media (max-width: 768px) {
   .App {
     padding: 0 2em;
