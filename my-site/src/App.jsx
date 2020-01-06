@@ -20,7 +20,7 @@ class App extends React.Component {
   
   componentDidMount() {
     this.setState({
-      currPage: Pages.about
+      currPage: Pages.home
     });
   }
 
