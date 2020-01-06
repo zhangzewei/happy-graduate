@@ -6,6 +6,7 @@ import BlogImage from  '../images/desk3.jpg';
 import AboutImage from  '../images/sunset1.jpg';
 import Blogs from '../containers/blogs.jsx';
 import Works from '../containers/works.jsx';
+import AboutMe from '../containers/about.jsx';
 
 const ImagesMapping = {
   work: WorkImage,
@@ -51,6 +52,8 @@ class SecondWrapper extends React.Component {
         return <Blogs />;
       case Pages.work:
         return <Works />;
+      case Pages.about:
+        return <AboutMe />;
       default:
         return null;
     }
